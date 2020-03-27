@@ -1,0 +1,176 @@
+*{
+    margin: 0px; 
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 12vh;
+    background-color: #b6a291;
+}
+
+.logo{
+    color: beige;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin: 5px;
+}
+
+@media screen and (max-width: 1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #b6a291;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .burger{
+        display: block;
+    }
+}
+
+
+.nav-active {
+    transform:translateX(0%);
+}
+
+.active #h2{
+    color: rgb(255, 191, 218);
+    font-weight: bold;
+  }
+
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.navbar__menu ul li a:hover {
+    color: rgb(102, 73, 45);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+section p {
+    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo{
+    background: url('../img/ait.png');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+}
+
+.main__hero h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+}
+
+#About{
+    background: url(../img/tea1.jpg) no-repeat center center/cover;
+    /* opacity: 0.7; */
+}
+
+#Wellness{
+    background: url(../img/tea3.jpg) no-repeat center center/cover;
+    /* opacity: 0.7; */
+}
+
+#Blends{
+    background: url(../img/tea2.jpg) no-repeat center center/cover;
+    /* opacity: 0.7; */
+}
+
+#Contact{
+    background: url(../img/tea4.jpg) no-repeat center center/cover;
+    /* opacity: 0.7; */
+}
